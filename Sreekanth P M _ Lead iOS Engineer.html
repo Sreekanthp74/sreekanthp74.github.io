@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sreekanth P M | Lead iOS Engineer</title>
+<meta name="description" content="Lead iOS engineer with 10+ years building healthcare, logistics and enterprise apps in Swift.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8; --surface:#FFFFFF; --ink:#101828; --muted:#475467; --line:#D6DBE4;
+  --accent:#4338CA; --accent-soft:#E4E2FA; --layer-a:#4338CA; --layer-b:#6D63E8; --layer-c:#A9A3F2;
+  --on-accent:#FFFFFF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1220; --surface:#171C2E; --ink:#EEF0F8; --muted:#A5ACC4; --line:#2A3150;
+    --accent:#9A93FF; --accent-soft:#242850; --layer-a:#7D74F5; --layer-b:#5A52C9; --layer-c:#3C3792;
+    --on-accent:#0E1220;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1220; --surface:#171C2E; --ink:#EEF0F8; --muted:#A5ACC4; --line:#2A3150;
+  --accent:#9A93FF; --accent-soft:#242850; --layer-a:#7D74F5; --layer-b:#5A52C9; --layer-c:#3C3792;
+  --on-accent:#0E1220;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-0.02em}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;gap:1rem;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;text-decoration:none}
+nav a{font-family:var(--display);font-weight:500;font-size:.95rem;text-decoration:none;margin-left:1.25rem;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+nav button{margin-left:1.25rem;background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:.25rem .8rem;font:500 .9rem var(--display);cursor:pointer}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:3.5rem 0 5rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:700}
+.hero .role{font-family:var(--display);font-weight:500;font-size:1.25rem;color:var(--accent);margin:1.2rem 0 1rem}
+.hero p.lead{max-width:34rem;color:var(--muted);margin:0 0 2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:500;text-decoration:none;padding:.75rem 1.3rem;border-radius:10px;border:1px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{transform:translateY(-1px)}
+
+.stack{width:100%;height:auto;display:block}
+.stack text{font-family:var(--display);font-weight:500}
+.layer{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.layer.l2{animation-delay:.18s}.layer.l1{animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.layer{animation:none}html{scroll-behavior:auto}.btn:hover{transform:none}}
+
+section{padding:4rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:2rem}
+.two{display:grid;grid-template-columns:14rem 1fr;gap:2rem}
+.two>h2{margin:0}
+
+.about p{margin:0 0 1rem;max-width:42rem}
+.facts{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:1.8rem;font-family:var(--display)}
+.facts b{display:block;font-size:2rem;line-height:1}
+.facts span{color:var(--muted);font-size:.95rem}
+
+.work{list-style:none;margin:0;padding:0}
+.work li{display:grid;grid-template-columns:14rem 1fr;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--line)}
+.work li:first-child{padding-top:0}
+.work h3{font-size:1.35rem}
+.work .tag{font-family:var(--display);font-size:.9rem;color:var(--accent);font-weight:500}
+.work p{margin:0;color:var(--muted);max-width:40rem}
+.work a.store{display:inline-block;margin-top:.7rem;font-family:var(--display);font-weight:500;color:var(--accent)}
+.apps-intro{color:var(--muted);max-width:40rem;margin:-1rem 0 2rem}
+
+.timeline{position:relative;padding-left:2rem;margin:0;list-style:none}
+.timeline::before{content:"";position:absolute;left:.45rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.timeline>li{position:relative;padding-bottom:2.6rem}
+.timeline>li::before{content:"";position:absolute;left:-2rem;top:.55rem;width:.95rem;height:.95rem;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.timeline .when{font-family:var(--display);font-size:.95rem;color:var(--muted)}
+.timeline h3{font-size:1.4rem;margin:.2rem 0 .1rem}
+.timeline .org{font-family:var(--display);font-weight:500;color:var(--accent);margin-bottom:.8rem}
+.timeline ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.timeline li li{margin-bottom:.4rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem}
+.skills h3{font-size:1.1rem;margin-bottom:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{font-family:var(--display);font-size:.92rem;font-weight:500;background:var(--accent-soft);padding:.3rem .75rem;border-radius:99px}
+
+.contact h2{font-size:clamp(2rem,5vw,3.6rem)!important;max-width:40rem}
+.contact p{color:var(--muted);max-width:32rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .two,.work li{grid-template-columns:1fr;gap:.6rem}
+  nav a{margin-left:.9rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Sreekanth P M</a>
+    <nav aria-label="Main">
+      <a href="#apps">Live apps</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Toggle dark mode">Theme</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>I build iOS apps that hold up at enterprise scale.</h1>
+        <div class="role">Lead iOS Engineer, Swift &amp; cloud integration</div>
+        <p class="lead">Over 10 years of shipping healthcare, logistics and enterprise apps, from system design and regulatory documentation to App Store release. Currently leading iOS engineering for global clients including UPS.</p>
+        <div class="btns">
+          <a class="btn primary" href="mailto:sreekanthp74@gmail.com">Email me</a>
+          <a class="btn" href="#work">See my work</a>
+        </div>
+      </div>
+      <svg class="stack" viewBox="0 0 400 360" role="img" aria-label="Layered app architecture: views on top, view models in the middle, data and cloud services at the bottom">
+        <g class="layer l1"><rect x="20" y="236" width="360" height="92" rx="16" fill="var(--layer-c)"/><text x="44" y="272" font-size="20" fill="var(--ink)">Data &amp; services</text><text x="44" y="303" font-size="15" fill="var(--ink)" opacity=".8">REST, AWS, offline sync, local storage</text></g>
+        <g class="layer l2"><rect x="20" y="128" width="360" height="92" rx="16" fill="var(--layer-b)"/><text x="44" y="164" font-size="20" fill="#fff">ViewModels</text><text x="44" y="195" font-size="15" fill="#fff" opacity=".85">Testable logic, one module per feature</text></g>
+        <g class="layer l3"><rect x="20" y="20" width="360" height="92" rx="16" fill="var(--layer-a)"/><text x="44" y="56" font-size="20" fill="#fff">Views</text><text x="44" y="87" font-size="15" fill="#fff" opacity=".85">SwiftUI and UIKit component libraries</text></g>
+      </svg>
+    </div>
+  </main>
+
+  <section id="about" class="about">
+    <div class="two">
+      <h2>About</h2>
+      <div>
+        <p>I'm a mobile architect who started as an iOS developer in 2014 and now leads engineering teams. I care about clean MVVM structure, modular code and reviews that make a team faster, so apps stay easy to change years after launch.</p>
+        <p>I've worked across medical, logistics and enterprise products, where reliability matters: offline sync, secure local storage, background location and tight alignment with Apple's guidelines.</p>
+        <div class="facts">
+          <div><b>10+</b><span>years in mobile</span></div>
+          <div><b>3</b><span>industries: healthcare, logistics, enterprise</span></div>
+          <div><b>iOS + Android</b><span>native and hybrid</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap" style="padding:0">
+      <h2>Live on the App Store</h2>
+      <p class="apps-intro">Apps I've helped build and ship as part of larger teams. Each one is public, so you can try it yourself.</p>
+      <ul class="work">
+        <li><div><span class="tag">Logistics</span><h3>UPS</h3></div><div><p>The UPS app for shipping and package tracking, used by customers worldwide.</p><a class="store" href="https://apps.apple.com/in/app/ups/id336377331" target="_blank" rel="noopener">View on the App Store</a></div></li>
+        <li><div><span class="tag">Retail</span><h3>Sodimac Hogar y Construcción</h3></div><div><p>Shopping app for Sodimac, a home improvement and construction retailer.</p><a class="store" href="https://apps.apple.com/in/app/sodimac-hogar-y-construcci%C3%B3n/id532353705" target="_blank" rel="noopener">View on the App Store</a></div></li>
+        <li><div><span class="tag">News and media</span><h3>India Today TV</h3></div><div><p>English news and live TV from India Today.</p><a class="store" href="https://apps.apple.com/in/app/india-today-tv-english-news/id510733452" target="_blank" rel="noopener">View on the App Store</a></div></li>
+        <li><div><span class="tag">News and media</span><h3>Aaj Tak Live</h3></div><div><p>Hindi live news from Aaj Tak.</p><a class="store" href="https://apps.apple.com/in/app/aaj-tak-live-hindi-news-india/id493319791" target="_blank" rel="noopener">View on the App Store</a></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap" style="padding:0">
+      <h2>Selected work</h2>
+      <ul class="work">
+        <li><div><span class="tag">For UPS</span><h3>Enterprise mobile systems</h3></div><p>Architected enterprise-grade iOS systems for a major global logistics client, built on clean, modular MVVM so teams can maintain and extend them over the long term.</p></li>
+        <li><div><span class="tag">Enterprise projects</span><h3>Shared SwiftUI &amp; UIKit libraries</h3></div><p>Built reusable component libraries that cut duplicated logic across multiple enterprise release streams.</p></li>
+        <li><div><span class="tag">RapidValue, for Yahoo (Verizon Media)</span><h3>Warehouse management app</h3></div><p>Delivered an enterprise warehouse management application with dependable client-server communication for operational data processing.</p></li>
+        <li><div><span class="tag">RapidValue</span><h3>OCR mobile plugins</h3></div><p>Created custom OCR plugins on Ionic and Cordova that run on both iOS and Android, plus Node.js microservices behind automated mobile workflows and a chatbot API.</p></li>
+        <li><div><span class="tag">MFluid</span><h3>Healthcare mobile products</h3></div><p>Engineered offline synchronization, background location tracking and secure local persistence, connected to AWS and MongoDB backends for real-time data flow.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap" style="padding:0">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">May 2021 to present</div>
+          <h3>Lead iOS Engineer</h3>
+          <div class="org">Global IT services company</div>
+          <ul>
+            <li>Set the MVVM modular architecture for enterprise apps used by global clients.</li>
+            <li>Lead code reviews and technical guidelines across distributed teams, and resolve performance bottlenecks.</li>
+            <li>Direct release engineering and critical production fixes, keeping releases within Apple's guidelines.</li>
+            <li>Work with product, QA, backend and DevOps leads in Agile sprints.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">Jan 2019 to Apr 2021</div>
+          <h3>Senior iOS Engineer / Senior Software Engineer</h3>
+          <div class="org">RapidValue Solutions</div>
+          <ul>
+            <li>Built a warehouse management app for Yahoo (Verizon Media).</li>
+            <li>Wrote cross-platform OCR plugins with Ionic and Cordova.</li>
+            <li>Developed Node.js microservices for mobile workflows, reimbursement modules and chatbot APIs.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">Dec 2014 to Jan 2019</div>
+          <h3>Senior iOS Developer / Team Lead</h3>
+          <div class="org">MFluid Mobile Apps</div>
+          <ul>
+            <li>Led healthcare and logistics apps from system design through App Store deployment.</li>
+            <li>Ran client requirement sessions and sprint planning, and mentored engineers on Swift best practices.</li>
+          </ul>
+        </li>
+      </ol>
+      <p style="color:var(--muted);margin-top:0">B.Tech in Computer Science &amp; Engineering, Malabar College of Engineering and Technology, University of Calicut.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap" style="padding:0">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Mobile development</h3><ul class="chips"><li>Swift</li><li>SwiftUI</li><li>UIKit</li><li>Objective-C</li><li>iOS SDK</li><li>Android</li></ul></div>
+        <div><h3>Architecture</h3><ul class="chips"><li>MVVM</li><li>Clean Architecture</li><li>Modularization</li><li>Client-server</li><li>System design</li></ul></div>
+        <div><h3>Backend &amp; cloud</h3><ul class="chips"><li>REST APIs</li><li>AWS</li><li>Node.js</li><li>JavaScript</li></ul></div>
+        <div><h3>Quality</h3><ul class="chips"><li>Unit testing</li><li>TDD</li><li>BDD</li><li>Performance tuning</li><li>Code reviews</li></ul></div>
+        <div><h3>Delivery</h3><ul class="chips"><li>CI/CD</li><li>App Store release</li><li>Xcode</li><li>Git</li><li>Jira</li><li>Agile / Scrum</li><li>Documentation</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap" style="padding:0">
+      <h2>Have an iOS project that needs a lead who has shipped before?</h2>
+      <p>I'm open to freelance and contract work. Tell me what you're building and where you are in the process.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:sreekanthp74@gmail.com">sreekanthp74@gmail.com</a>
+        <a class="btn" href="tel:+919961409149">+91 99614 09149</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Sreekanth P M, Kerala, India</footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
